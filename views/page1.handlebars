@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <title>{{title}}</title>
 </head>
 <body>
     <h1>Welcome to page 1 </h1>
@@ -9,5 +9,13 @@
     <a href="/">Home</a>
     <a href="/page2">Page 2</a>
     <a href="/getName">Show Name</a>
+
+    {{#if names}}
+        <ul>
+            {{#each names}}
+                <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    {{/if}}
 </body>
 </html>
